@@ -565,7 +565,7 @@ async def to_code(config):
 
     if CONF_DEBUG_LOG_UNDEFINED_MESSAGES in config:
         cg.add(
-            var.set_debug_log_udefined_messages(
+            var.set_debug_log_undefined_messages(
                 config[CONF_DEBUG_LOG_UNDEFINED_MESSAGES]
             )
         )
@@ -573,7 +573,7 @@ async def to_code(config):
     # Mapping of config keys to their corresponding methods
     config_actions = {
         CONF_DEBUG_LOG_MESSAGES: var.set_debug_log_messages,
-        CONF_DEBUG_LOG_MESSAGES_RAW: var.set_debug_log_messages_raw,
+        CONF_DEBUG_LOG_MESSAGES_RAW: var.set_debug_log_messages_raw,ude
         CONF_NON_NASA_KEEPALIVE: var.set_non_nasa_keepalive,
         CONF_DEBUG_LOG_UNDEFINED_MESSAGES: var.set_debug_logc_undefined_messages,
     }
