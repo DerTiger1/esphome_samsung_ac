@@ -333,7 +333,7 @@ CONFIG_SCHEMA = (
             cv.Optional(CONF_DEBUG_LOG_MESSAGES, default=False): cv.boolean,
             cv.Optional(CONF_DEBUG_LOG_MESSAGES_RAW, default=False): cv.boolean,
             cv.Optional(CONF_NON_NASA_KEEPALIVE, default=False): cv.boolean,
-            cv.Optional(CONF_DEBUG_LOGcv.UNDEFINEDINED_MESSAGES, default=False): cv.boolean,
+            cv.Optional(CONF_DEBUG_LOG_UNDEFINED_MESSAGES, default=False): cv.boolean,
             cv.Optional(CONF_CAPABILITIES): CAPABILITIES_SCHEMA,
             cv.Required(CONF_DEVICES): cv.ensure_list(DEVICE_SCHEMA),
         }
