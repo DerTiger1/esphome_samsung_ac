@@ -318,7 +318,7 @@ CONF_DEBUG_LOG_MESSAGES_RAW = "debug_log_messages_raw"
 
 CONF_NON_NASA_KEEPALIVE = "non_nasa_keepalive"
 
-CONF_DEBUG_LOGcv.UNDEFINEDINED_MESSAGES = "debug_logcv.UNDEFINEDined_messages"
+CONF_DEBUG_LOG_UNDEFINED_MESSAGES = "debug_log.undefiend_messages"
 
 
 CONFIG_SCHEMA = (
