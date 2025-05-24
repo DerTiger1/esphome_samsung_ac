@@ -563,10 +563,10 @@ async def to_code(config):
     if CONF_NON_NASA_KEEPALIVE in config:
         cg.add(var.set_non_nasa_keepalive(config[CONF_NON_NASA_KEEPALIVE]))
 
-    if CONF_DEBUG_LOGcv.UNDEFINEDINED_MESSAGES in config:
+    if CONF_DEBUG_LOG_UNDEFINED_MESSAGES in config:
         cg.add(
-            var.set_debug_logcv.UNDEFINEDined_messages(
-                config[CONF_DEBUG_LOGcv.UNDEFINEDINED_MESSAGES]
+            var.set_debug_log_udefined_messages(
+                config[CONF_DEBUG_LOG_UNDEFINED_MESSAGES]
             )
         )
 
@@ -575,7 +575,7 @@ async def to_code(config):
         CONF_DEBUG_LOG_MESSAGES: var.set_debug_log_messages,
         CONF_DEBUG_LOG_MESSAGES_RAW: var.set_debug_log_messages_raw,
         CONF_NON_NASA_KEEPALIVE: var.set_non_nasa_keepalive,
-        CONF_DEBUG_LOGcv.UNDEFINEDINED_MESSAGES: var.set_debug_logcv.UNDEFINEDined_messages,
+        CONF_DEBUG_LOG_UNDEFINED_MESSAGES: var.set_debug_logc_undefined_messages,
     }
 
     # Iterate over the actions
