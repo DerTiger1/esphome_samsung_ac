@@ -143,12 +143,12 @@ CUSTOM_SENSOR_SCHEMA = sensor.sensor_schema().extend(
 
 def custom_sensor_schema(
     message: int,
-    unit_of_measurement: str = sensor._UNDEF,
-    icon: str = sensor._UNDEF,
-    accuracy_decimals: int = sensor._UNDEF,
-    device_class: str = sensor._UNDEF,
-    state_class: str = sensor._UNDEF,
-    entity_category: str = sensor._UNDEF,
+    unit_of_measurement: str = sensor.cv.UNDEFINED,
+    icon: str = sensor.cv.UNDEFINED,
+    accuracy_decimals: int = sensor.cv.UNDEFINED,
+    device_class: str = sensor.cv.UNDEFINED,
+    state_class: str = sensor.cv.UNDEFINED,
+    entity_category: str = sensor.cv.UNDEFINED,
     raw_filters=[],
 ):
     return sensor.sensor_schema(
@@ -318,7 +318,7 @@ CONF_DEBUG_LOG_MESSAGES_RAW = "debug_log_messages_raw"
 
 CONF_NON_NASA_KEEPALIVE = "non_nasa_keepalive"
 
-CONF_DEBUG_LOG_UNDEFINED_MESSAGES = "debug_log_undefined_messages"
+CONF_DEBUG_LOGcv.UNDEFINEDINED_MESSAGES = "debug_logcv.UNDEFINEDined_messages"
 
 
 CONFIG_SCHEMA = (
@@ -333,7 +333,7 @@ CONFIG_SCHEMA = (
             cv.Optional(CONF_DEBUG_LOG_MESSAGES, default=False): cv.boolean,
             cv.Optional(CONF_DEBUG_LOG_MESSAGES_RAW, default=False): cv.boolean,
             cv.Optional(CONF_NON_NASA_KEEPALIVE, default=False): cv.boolean,
-            cv.Optional(CONF_DEBUG_LOG_UNDEFINED_MESSAGES, default=False): cv.boolean,
+            cv.Optional(CONF_DEBUG_LOGcv.UNDEFINEDINED_MESSAGES, default=False): cv.boolean,
             cv.Optional(CONF_CAPABILITIES): CAPABILITIES_SCHEMA,
             cv.Required(CONF_DEVICES): cv.ensure_list(DEVICE_SCHEMA),
         }
@@ -563,10 +563,10 @@ async def to_code(config):
     if CONF_NON_NASA_KEEPALIVE in config:
         cg.add(var.set_non_nasa_keepalive(config[CONF_NON_NASA_KEEPALIVE]))
 
-    if CONF_DEBUG_LOG_UNDEFINED_MESSAGES in config:
+    if CONF_DEBUG_LOGcv.UNDEFINEDINED_MESSAGES in config:
         cg.add(
-            var.set_debug_log_undefined_messages(
-                config[CONF_DEBUG_LOG_UNDEFINED_MESSAGES]
+            var.set_debug_logcv.UNDEFINEDined_messages(
+                config[CONF_DEBUG_LOGcv.UNDEFINEDINED_MESSAGES]
             )
         )
 
@@ -575,7 +575,7 @@ async def to_code(config):
         CONF_DEBUG_LOG_MESSAGES: var.set_debug_log_messages,
         CONF_DEBUG_LOG_MESSAGES_RAW: var.set_debug_log_messages_raw,
         CONF_NON_NASA_KEEPALIVE: var.set_non_nasa_keepalive,
-        CONF_DEBUG_LOG_UNDEFINED_MESSAGES: var.set_debug_log_undefined_messages,
+        CONF_DEBUG_LOGcv.UNDEFINEDINED_MESSAGES: var.set_debug_logcv.UNDEFINEDined_messages,
     }
 
     # Iterate over the actions
