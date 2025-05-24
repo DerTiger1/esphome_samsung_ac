@@ -575,7 +575,7 @@ async def to_code(config):
         CONF_DEBUG_LOG_MESSAGES: var.set_debug_log_messages,
         CONF_DEBUG_LOG_MESSAGES_RAW: var.set_debug_log_messages_raw,
         CONF_NON_NASA_KEEPALIVE: var.set_non_nasa_keepalive,
-        CONF_DEBUG_LOG_UNDEFINED_MESSAGES: var.set_debug_logc_undefined_messages,
+        CONF_DEBUG_LOG_UNDEFINED_MESSAGES: var.set_debug_log_undefined_messages,
     }
 
     # Iterate over the actions
